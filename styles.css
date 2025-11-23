@@ -1,0 +1,114 @@
+/* GENERAL RESET & BODY */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #faf7f2;
+  color: #2c2c2c;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* HEADER - HORIZONTAL NAVBAR */
+header {
+  background-color: #d37c35;   /* Dark orange – AA contrast with white */
+  color: white;
+  padding: 1rem;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem; /* requirement: gap for flex children */
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+/* MAIN LAYOUT (SIDEBAR + ARTICLE) */
+main {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1; /* requirement #12 */
+  padding: 1.5rem; /* spacing using padding */
+  gap: 2rem; /* gap between sidebar and article */
+}
+
+/* SIDEBAR */
+aside {
+  width: 12rem;
+}
+
+aside ul {
+  display: flex;               /* requirement #11: flex UL, not aside */
+  flex-direction: column;
+  gap: 1rem;                   /* requirement: gap instead of margin */
+  list-style: none;
+}
+
+aside ul li {
+  background-color: #fff3e2;  /* requirement #6: distinct background */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* ARTICLE CONTENT */
+article {
+  flex-grow: 1;
+  padding: 0.5rem;
+}
+
+article h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+article p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* TESTIMONIAL */
+.testimonial {
+  background-color: #f7eadc; /* requirement #7 */
+  border-left: 4px solid #d37c35;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+/* FOOTER */
+footer {
+  background-color: #333; /* requirement #8: unique background */
+  color: #efefef;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* ACCESSIBILITY: ensure links visible */
+a {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+a:hover {
+  opacity: 0.7;
+}
